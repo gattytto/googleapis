@@ -1,0 +1,13 @@
+module(
+    name = "googleapis",
+    version = "0.0.0-custom",  # Use 0.0.0 for non-BCR modules
+    repo_name = "com_google_googleapis",
+)
+
+# Core dependencies
+bazel_dep(name = "bazel_skylib", version = "1.4.0")
+bazel_dep(name = "rules_proto", version = "7.1.0")
+bazel_dep(name = "protobuf", version = "33.0", repo_name = "com_google_protobuf")
+bazel_dep(name = "grpc", version = "1.60.0", repo_name = "com_github_grpc_grpc")
+
+# Optional: Add any patches or customizations your project needs
